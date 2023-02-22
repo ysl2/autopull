@@ -2,9 +2,11 @@ import subprocess
 import json
 import pathlib
 import threading
+from rich.pretty import pprint as print
 
 # KWARGS = {'shell': True, 'stdout': subprocess.PIPE, 'stderr': subprocess.STDOUT}
 KWARGS = {'shell': True}
+CONFLICTS = []
 
 
 class MyThread(threading.Thread):
@@ -29,7 +31,7 @@ class MyThread(threading.Thread):
             return
         for branch in self.item['branches']:
             cmd = (
-                f'git checkout -b pullbot; '
+                'git checkout -b pullbot; '
                 f'git fetch origin {branch}; '
                 f'git reset --hard origin/{branch}; '
                 f'git fetch upstream {branch}; '
@@ -38,8 +40,10 @@ class MyThread(threading.Thread):
             r = subprocess.Popen(cmd, **KWARGS, cwd=rf'{self.item["dir"]}').wait()
             if r != 0:
                 subprocess.Popen('git merge --abort', **KWARGS, cwd=rf'{self.item["dir"]}').wait()
+                CONFLICTS.append((self.item['origin'], branch))
                 continue
-            subprocess.Popen('git push origin pullbot', **KWARGS, cwd=rf'{self.item["dir"]}').wait()
+            cmd = f'git checkout {branch}; git merge pullbot; git push origin {branch}; git branch -d pullbot'
+            subprocess.Popen(cmd, **KWARGS, cwd=rf'{self.item["dir"]}').wait()
 
 
 def main():
@@ -51,8 +55,17 @@ def main():
     with open('config.json', 'r') as f:
         j = json.load(f)
 
+    threads = []
+
     for item in j:
-        MyThread(item).start()
+        t = MyThread(item)
+        t.start()
+        threads.append(t)
+
+    for t in threads:
+        t.join()
+
+    print(CONFLICTS)
 
 
 if __name__ == '__main__':
