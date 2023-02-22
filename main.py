@@ -3,7 +3,7 @@ import json
 import pathlib
 import threading
 
-# kwargs = {'shell': True, 'stdout': subprocess.PIPE, 'stderr': subprocess.STDOUT}
+# KWARGS = {'shell': True, 'stdout': subprocess.PIPE, 'stderr': subprocess.STDOUT}
 KWARGS = {'shell': True}
 
 
