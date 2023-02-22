@@ -1,0 +1,12 @@
+[
+  {
+    "origin": "git@git.zhlh6.cn:ysl2/LunarVim",
+    "upstream": "git@git.zhlh6.cn:LunarVim/LunarVim",
+    "branches": ["master"]
+  },
+  {
+    "origin": "git@git.zhlh6.cn:ysl2/neovim",
+    "upstream": "git@git.zhlh6.cn:neovim/neovim",
+    "branches": ["master"]
+  }
+]
