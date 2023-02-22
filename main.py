@@ -44,7 +44,7 @@ def temp1():
     # HACK: Songli.Yu: "Clone repos."
     for item in j:
         item['dir'] = pathlib.Path(item['origin'].split('/')[1])
-        item['p'] = subprocess.Popen(f'git clone {item["origin"]}', **kwargs)
+        item['p'] = subprocess.Popen(f'git clone {item["origin"]} {item["dir"]}', **kwargs)
 
     print(j)
 
@@ -61,8 +61,8 @@ def temp1():
 
     # HACK: Songli.Yu: "Add upstream url."
     for item in j:
-        cmd = (f'cd {item["dir"]} && git remote add upstream {item["upstream"]}',)
-        subprocess.Popen(cmd, **kwargs)
+        cmd = f'git remote add upstream {item["upstream"]}'
+        subprocess.Popen(cmd, **kwargs, cwd=rf'{item["dir"]}')
 
     # HACK: Songli.Yu: "Merge specific branches or all branches."
     for item in j:
@@ -71,20 +71,17 @@ def temp1():
             continue
         for branch in item['branches']:
             cmd = (
-                f'cd {item["dir"]} && '
-                '('
                 f'git checkout -b pullbot; '
                 f'git fetch origin {branch}; '
                 f'git reset --hard origin/{branch}; '
                 f'git fetch upstream {branch}; '
                 f'git merge --no-edit upstream/{branch}; '
-                ')'
             )
-            r = subprocess.Popen(cmd, shell=True).wait()
+            r = subprocess.Popen(cmd, **kwargs, cwd=rf'{item["dir"]}').wait()
             if r != 0:
-                subprocess.Popen(f'cd {item["dir"]} && git merge --abort', **kwargs).wait()
+                subprocess.Popen('git merge --abort', **kwargs, cwd=rf'{item["dir"]}').wait()
                 continue
-            subprocess.Popen(f'cd {item["dir"]} && git push origin pullbot', shell=True).wait()
+            subprocess.Popen('git push origin pullbot', **kwargs, cwd=rf'{item["dir"]}').wait()
 
 
 if __name__ == '__main__':
