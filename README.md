@@ -1,4 +1,4 @@
-# **A**uto**P**ull: **A** stu**p**id tool (to save your life).
+# AutoPull: A stupid tool (to save your life).
 
 > NOTE: Alpha stage now, need more test.
 
