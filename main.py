@@ -31,19 +31,18 @@ class MyThread(threading.Thread):
             return
         for branch in self.item['branches']:
             cmd = (
-                'git checkout -b pullbot; '
-                f'git fetch origin {branch}; '
-                f'git reset --hard origin/{branch}; '
+                f'git checkout {branch}; '
+                f'git reset --hard HEAD; '
+                f'git pull origin {branch}; '
                 f'git fetch upstream {branch}; '
-                f'git merge --no-edit upstream/{branch}; '
+                f'git merge upstream/{branch} --allow-unrelated-histories; '
             )
             r = subprocess.Popen(cmd, **KWARGS, cwd=rf'{self.item["dir"]}').wait()
             if r != 0:
-                subprocess.Popen('git merge --abort', **KWARGS, cwd=rf'{self.item["dir"]}').wait()
+                subprocess.Popen('git merge --abort; git reset --hard HEAD', **KWARGS, cwd=rf'{self.item["dir"]}').wait()
                 CONFLICTS.append((self.item['origin'], branch))
                 continue
-            cmd = f'git checkout {branch}; git merge pullbot; git push origin {branch}; git branch -d pullbot'
-            subprocess.Popen(cmd, **KWARGS, cwd=rf'{self.item["dir"]}').wait()
+            subprocess.Popen(f'git push origin {branch}', **KWARGS, cwd=rf'{self.item["dir"]}').wait()
 
 
 def main():
