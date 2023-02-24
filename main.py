@@ -16,7 +16,7 @@ class MyThread(threading.Thread):
 
     def run(self) -> None:
         # HACK: Songli.Yu: "Clone repos."
-        self.item['dir'] = pathlib.Path(self.item['origin'].split('/')[1])
+        self.item['dir'] = pathlib.Path(self.item['origin'].split('/')[1].split('.')[0])
         r = subprocess.Popen(f'git clone {self.item["origin"]} {self.item["dir"]}', **KWARGS).wait()
         if r != 0 and not self.item['dir'].exists():
             return
@@ -35,7 +35,7 @@ class MyThread(threading.Thread):
                 f'git reset --hard HEAD; '
                 f'git pull origin {branch}; '
                 f'git fetch upstream {branch}; '
-                f'git merge upstream/{branch} --allow-unrelated-histories; '
+                f'git merge upstream/{branch} --allow-unrelated-histories --no-edit; '
             )
             r = subprocess.Popen(cmd, **KWARGS, cwd=rf'{self.item["dir"]}').wait()
             if r != 0:
