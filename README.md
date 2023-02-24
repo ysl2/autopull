@@ -17,4 +17,4 @@ You can modify your pull & push procedure in `main.py`.
 
 For my personal use, but the source code is easily read and can be easily modified to meet your flavor.
 
-> Issues and PRs are welcome.
+Issues and PRs are welcome.
