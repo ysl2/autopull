@@ -6,7 +6,8 @@ from rich.pretty import pprint as print
 
 # KWARGS = {'shell': True, 'stdout': subprocess.PIPE, 'stderr': subprocess.STDOUT}
 KWARGS = {'shell': True}
-CONFLICTS = []
+
+conflicts = []
 
 
 class MyThread(threading.Thread):
@@ -32,7 +33,7 @@ class MyThread(threading.Thread):
         for branch in self.item['branches']:
             cmd = (
                 f'git checkout {branch}; '
-                f'git reset --hard HEAD; '
+                'git reset --hard HEAD; '
                 f'git pull origin {branch}; '
                 f'git fetch upstream {branch}; '
                 f'git merge upstream/{branch} --allow-unrelated-histories --no-edit; '
@@ -40,7 +41,7 @@ class MyThread(threading.Thread):
             r = subprocess.Popen(cmd, **KWARGS, cwd=rf'{self.item["dir"]}').wait()
             if r != 0:
                 subprocess.Popen('git merge --abort; git reset --hard HEAD', **KWARGS, cwd=rf'{self.item["dir"]}').wait()
-                CONFLICTS.append((self.item['origin'], branch))
+                conflicts.append((self.item['origin'], branch))
                 continue
             subprocess.Popen(f'git push origin {branch}', **KWARGS, cwd=rf'{self.item["dir"]}').wait()
 
@@ -64,7 +65,7 @@ def main():
     for t in threads:
         t.join()
 
-    print(CONFLICTS)
+    print(conflicts)
 
 
 if __name__ == '__main__':
