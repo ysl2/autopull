@@ -1,7 +1,5 @@
 # AutoPull: A stupid tool (to save your life).
 
-> NOTE: Alpha stage now, need more test.
-
 You might encounter this situation:
 
 ```
@@ -11,10 +9,12 @@ This branch is 18 commits ahead, 22 commits behind ...
 
 I want to auto pull upstream and merge it to origin.
 
-If can fast-forward, then push.
+If can fast-forward, then merge and push. Else, abort and reset to HEAD.
 
-Else, abort and reset.
+You can config your repos in `config.json`.
+
+You can modify your pull & push procedure in `main.py`.
 
 For my personal use, but the source code is easily read and can be easily modified to meet your flavor.
 
-Issues and PRs are welcome.
+> Issues and PRs are welcome.
