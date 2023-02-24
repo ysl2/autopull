@@ -1,4 +1,4 @@
-# AutoPull: A stupid tool (to save your life).
+# AutoPull: A stupid tool (to save your time).
 
 You might encounter this situation:
 
