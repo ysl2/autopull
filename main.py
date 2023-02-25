@@ -17,7 +17,7 @@ class MyThread(threading.Thread):
 
     def run(self) -> None:
         # HACK: Songli.Yu: "Clone repos."
-        self.item['dir'] = pathlib.Path(self.item['origin'].split('/')[1].split('.')[0])
+        self.item['dir'] = pathlib.Path(self.item['origin'].split('/')[1].split('.git')[0])
         r = subprocess.Popen(f'git clone {self.item["origin"]} {self.item["dir"]}', **KWARGS).wait()
         if r != 0 and not self.item['dir'].exists():
             return
