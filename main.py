@@ -33,10 +33,10 @@ class MyThread(threading.Thread):
         for branch in self.item['branches']:
             cmd = (
                 f'git checkout {branch}; '
-                'git reset --hard HEAD; '
-                f'git pull origin {branch}; '
-                f'git fetch upstream {branch}; '
-                f'git merge upstream/{branch} --allow-unrelated-histories --no-edit; '
+                'git fetch origin; ',
+                f'git reset --hard origin/{branch}; '
+                f'git fetch upstream; '
+                f'git merge upstream/{branch} --no-edit; '
             )
             r = subprocess.Popen(cmd, **KWARGS, cwd=rf'{self.item["dir"]}').wait()
             if r != 0:

@@ -1,9 +1,3 @@
 # Ignore all by default.
 *
-
-# Except these:
-!config.json
-!main.py
 !.gitignore
-!LICENSE
-!README.md

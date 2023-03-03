@@ -1,17 +1,12 @@
 [
   {
-    "origin": "git@git.zhlh6.cn:ysl2/coc-rust-analyzer.git",
+    "origin": "git@github.com:ysl2/coc-rust-analyzer.git",
     "upstream": "git@git.zhlh6.cn:fannheyward/coc-rust-analyzer.git",
     "branches": ["master"]
   },
   {
-    "origin": "git@git.zhlh6.cn:ysl2/LunarVim",
-    "upstream": "git@git.zhlh6.cn:LunarVim/LunarVim",
-    "branches": ["master"]
-  },
-  {
-    "origin": "git@git.zhlh6.cn:ysl2/neovim.git",
-    "upstream": "git@git.zhlh6.cn:neovim/neovim.git",
-    "branches": ["master"]
+    "origin": "git@github.com:ysl2/lazy.nvim.git",
+    "upstream": "git@git.zhlh6.cn:folke/lazy.nvim.git",
+    "branches": ["main"]
   }
 ]
