@@ -33,7 +33,7 @@ class MyThread(threading.Thread):
         for branch in self.item['branches']:
             cmd = (
                 f'git checkout {branch}; '
-                'git fetch origin; ',
+                'git fetch origin; '
                 f'git reset --hard origin/{branch}; '
                 f'git fetch upstream; '
                 f'git merge upstream/{branch} --no-edit; '

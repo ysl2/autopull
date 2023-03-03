@@ -1,12 +1,12 @@
 [
   {
     "origin": "git@github.com:ysl2/coc-rust-analyzer.git",
-    "upstream": "git@git.zhlh6.cn:fannheyward/coc-rust-analyzer.git",
+    "upstream": "git@github.com:fannheyward/coc-rust-analyzer.git",
     "branches": ["master"]
   },
   {
     "origin": "git@github.com:ysl2/lazy.nvim.git",
-    "upstream": "git@git.zhlh6.cn:folke/lazy.nvim.git",
+    "upstream": "git@github.com:folke/lazy.nvim.git",
     "branches": ["main"]
   }
 ]
