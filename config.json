@@ -8,5 +8,15 @@
     "origin": "git@github.com:ysl2/lazy.nvim.git",
     "upstream": "git@github.com:folke/lazy.nvim.git",
     "branches": ["main"]
+  },
+  {
+    "origin": "git@github.com:ysl2/nvim-tree.lua.git",
+    "upstream": "git@github.com:nvim-tree/nvim-tree.lua.git",
+    "branches": ["master"]
+  },
+  {
+    "origin": "git@github.com:ysl2/distant.nvim.git",
+    "upstream": "git@github.com:chipsenkbeil/distant.nvim.git",
+    "branches": ["v0.2"]
   }
 ]
