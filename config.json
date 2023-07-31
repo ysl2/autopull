@@ -20,18 +20,18 @@
     "branches": ["v0.2"]
   },
   {
-    "origin": "git@github.com:ysl2/fq-book.git",
-    "upstream": "git@github.com:hoochanlon/fq-book.git",
+    "origin": "git@github.com:ysl2/neovim-session-manager.git",
+    "upstream": "git@github.com:Shatur/neovim-session-manager.git",
     "branches": ["master"]
   },
   {
-    "origin": "git@github.com:ysl2/NeiJuan.git",
-    "upstream": "git@github.com:hoochanlon/NeiJuan.git",
+    "origin": "git@github.com:ysl2/coc-marksman.git",
+    "upstream": "git@github.com:yaegassy/coc-marksman.git",
     "branches": ["master"]
   },
   {
-    "origin": "git@github.com:ysl2/SS-SSR-V2ray.git",
-    "upstream": "git@github.com:hwanz/SS-SSR-V2ray.git",
+    "origin": "git@github.com:ysl2/bufdelete.git",
+    "upstream": "git@github.com:famiu/buffdelete.git",
     "branches": ["master"]
   }
 ]
