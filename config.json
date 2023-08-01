@@ -1,72 +1,72 @@
 [
   {
-    "origin": "git@github.com:ysl2/lazy.nvim.git",
-    "upstream": "git@github.com:folke/lazy.nvim.git",
+    "origin": "git@git.zhlh6.cn:ysl2/lazy.nvim.git",
+    "upstream": "git@git.zhlh6.cn:folke/lazy.nvim.git",
     "branches": ["main"]
   },
   {
-    "origin": "git@github.com:ysl2/nvim-deus.git",
-    "upstream": "git@github.com:theniceboy/nvim-deus.git",
+    "origin": "git@git.zhlh6.cn:ysl2/nvim-deus.git",
+    "upstream": "git@git.zhlh6.cn:theniceboy/nvim-deus.git",
     "branches": ["master"]
   },
   {
-    "origin": "git@github.com:ysl2/bufdelete.nvim.git",
-    "upstream": "git@github.com:famiu/buffdelete.nvim.git",
+    "origin": "git@git.zhlh6.cn:ysl2/bufdelete.nvim.git",
+    "upstream": "git@git.zhlh6.cn:famiu/bufdelete.nvim.git",
     "branches": ["master"]
   },
   {
-    "origin": "git@github.com:ysl2/vim-bookmarks.git",
-    "upstream": "git@github.com:MattesGroeger/vim-bookmarks.git",
+    "origin": "git@git.zhlh6.cn:ysl2/vim-bookmarks.git",
+    "upstream": "git@git.zhlh6.cn:MattesGroeger/vim-bookmarks.git",
     "branches": ["master"]
   },
   {
-    "origin": "git@github.com:ysl2/telescope-vim-bookmarks.nvim.git",
-    "upstream": "git@github.com:tom-anders/telescope-vim-bookmarks.nvim.git",
+    "origin": "git@git.zhlh6.cn:ysl2/telescope-vim-bookmarks.nvim.git",
+    "upstream": "git@git.zhlh6.cn:tom-anders/telescope-vim-bookmarks.nvim.git",
     "branches": ["main"]
   },
   {
-    "origin": "git@github.com:ysl2/nvim-tree.lua.git",
-    "upstream": "git@github.com:nvim-tree/nvim-tree.lua.git",
+    "origin": "git@git.zhlh6.cn:ysl2/nvim-tree.lua.git",
+    "upstream": "git@git.zhlh6.cn:nvim-tree/nvim-tree.lua.git",
     "branches": ["master"]
   },
   {
-    "origin": "git@github.com:ysl2/distant.nvim.git",
-    "upstream": "git@github.com:chipsenkbeil/distant.nvim.git",
+    "origin": "git@git.zhlh6.cn:ysl2/distant.nvim.git",
+    "upstream": "git@git.zhlh6.cn:chipsenkbeil/distant.nvim.git",
     "branches": ["v0.2"]
   },
   {
-    "origin": "git@github.com:ysl2/img-paste.vim",
-    "upstream": "git@github.com:img-paste-devs/img-paste.vim.git",
+    "origin": "git@git.zhlh6.cn:ysl2/img-paste.vim",
+    "upstream": "git@git.zhlh6.cn:img-paste-devs/img-paste.vim.git",
     "branches": ["master"]
   },
   {
-    "origin": "git@github.com:ysl2/neovim-session-manager.git",
-    "upstream": "git@github.com:Shatur/neovim-session-manager.git",
+    "origin": "git@git.zhlh6.cn:ysl2/neovim-session-manager.git",
+    "upstream": "git@git.zhlh6.cn:Shatur/neovim-session-manager.git",
     "branches": ["master"]
   },
   {
-    "origin": "git@github.com:ysl2/leetcode.vim.git",
-    "upstream": "git@github.com:Rlyown/leetcode.vim.git",
+    "origin": "git@git.zhlh6.cn:ysl2/leetcode.vim.git",
+    "upstream": "git@git.zhlh6.cn:Rlyown/leetcode.vim.git",
     "branches": ["master"]
   },
   {
-    "origin": "git@github.com:ysl2/vim-colorscheme-switcher.git",
-    "upstream": "git@github.com:xolox/vim-colorscheme-switcher.git",
+    "origin": "git@git.zhlh6.cn:ysl2/vim-colorscheme-switcher.git",
+    "upstream": "git@git.zhlh6.cn:xolox/vim-colorscheme-switcher.git",
     "branches": ["master"]
   },
   {
-    "origin": "git@github.com:ysl2/coc-rust-analyzer.git",
-    "upstream": "git@github.com:fannheyward/coc-rust-analyzer.git",
+    "origin": "git@git.zhlh6.cn:ysl2/coc-rust-analyzer.git",
+    "upstream": "git@git.zhlh6.cn:fannheyward/coc-rust-analyzer.git",
     "branches": ["master"]
   },
   {
-    "origin": "git@github.com:ysl2/coc-marksman.git",
-    "upstream": "git@github.com:yaegassy/coc-marksman.git",
+    "origin": "git@git.zhlh6.cn:ysl2/coc-marksman.git",
+    "upstream": "git@git.zhlh6.cn:yaegassy/coc-marksman.git",
     "branches": ["master"]
   },
   {
-    "origin": "git@github.com:ysl2/winbar.nvim.git",
-    "upstream": "git@github.com:fgheng/winbar.nvim.git",
+    "origin": "git@git.zhlh6.cn:ysl2/winbar.nvim.git",
+    "upstream": "git@git.zhlh6.cn:fgheng/winbar.nvim.git",
     "branches": ["main"]
   }
 ]
