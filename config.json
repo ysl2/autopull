@@ -1,12 +1,27 @@
 [
   {
-    "origin": "git@github.com:ysl2/coc-rust-analyzer.git",
-    "upstream": "git@github.com:fannheyward/coc-rust-analyzer.git",
+    "origin": "git@github.com:ysl2/lazy.nvim.git",
+    "upstream": "git@github.com:folke/lazy.nvim.git",
+    "branches": ["main"]
+  },
+  {
+    "origin": "git@github.com:ysl2/nvim-deus.git",
+    "upstream": "git@github.com:theniceboy/nvim-deus.git",
     "branches": ["master"]
   },
   {
-    "origin": "git@github.com:ysl2/lazy.nvim.git",
-    "upstream": "git@github.com:folke/lazy.nvim.git",
+    "origin": "git@github.com:ysl2/bufdelete.nvim.git",
+    "upstream": "git@github.com:famiu/buffdelete.nvim.git",
+    "branches": ["master"]
+  },
+  {
+    "origin": "git@github.com:ysl2/vim-bookmarks.git",
+    "upstream": "git@github.com:MattesGroeger/vim-bookmarks.git",
+    "branches": ["master"]
+  },
+  {
+    "origin": "git@github.com:ysl2/telescope-vim-bookmarks.nvim.git",
+    "upstream": "git@github.com:tom-anders/telescope-vim-bookmarks.nvim.git",
     "branches": ["main"]
   },
   {
@@ -20,8 +35,28 @@
     "branches": ["v0.2"]
   },
   {
+    "origin": "git@github.com:ysl2/img-paste.vim",
+    "upstream": "git@github.com:img-paste-devs/img-paste.vim.git",
+    "branches": ["master"]
+  },
+  {
     "origin": "git@github.com:ysl2/neovim-session-manager.git",
     "upstream": "git@github.com:Shatur/neovim-session-manager.git",
+    "branches": ["master"]
+  },
+  {
+    "origin": "git@github.com:ysl2/leetcode.vim.git",
+    "upstream": "git@github.com:Rlyown/leetcode.vim.git",
+    "branches": ["master"]
+  },
+  {
+    "origin": "git@github.com:ysl2/vim-colorscheme-switcher.git",
+    "upstream": "git@github.com:xolox/vim-colorscheme-switcher.git",
+    "branches": ["master"]
+  },
+  {
+    "origin": "git@github.com:ysl2/coc-rust-analyzer.git",
+    "upstream": "git@github.com:fannheyward/coc-rust-analyzer.git",
     "branches": ["master"]
   },
   {
@@ -30,8 +65,8 @@
     "branches": ["master"]
   },
   {
-    "origin": "git@github.com:ysl2/bufdelete.git",
-    "upstream": "git@github.com:famiu/buffdelete.git",
-    "branches": ["master"]
+    "origin": "git@github.com:ysl2/winbar.nvim.git",
+    "upstream": "git@github.com:fgheng/winbar.nvim.git",
+    "branches": ["main"]
   }
 ]
