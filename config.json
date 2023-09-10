@@ -5,11 +5,6 @@
     "branches": ["main"]
   },
   {
-    "origin": "git@git.zhlh6.cn:ysl2/nvim-deus.git",
-    "upstream": "git@git.zhlh6.cn:theniceboy/nvim-deus.git",
-    "branches": ["master"]
-  },
-  {
     "origin": "git@git.zhlh6.cn:ysl2/bufdelete.nvim.git",
     "upstream": "git@git.zhlh6.cn:famiu/bufdelete.nvim.git",
     "branches": ["master"]
@@ -55,6 +50,11 @@
     "branches": ["master"]
   },
   {
+    "origin": "git@git.zhlh6.cn:ysl2/vim-plugin-AnsiEsc.git",
+    "upstream": "git@git.zhlh6.cn:CarloWood/vim-plugin-AnsiEsc.git",
+    "branches": ["master"]
+  },
+  {
     "origin": "git@git.zhlh6.cn:ysl2/coc-rust-analyzer.git",
     "upstream": "git@git.zhlh6.cn:fannheyward/coc-rust-analyzer.git",
     "branches": ["master"]
@@ -63,10 +63,5 @@
     "origin": "git@git.zhlh6.cn:ysl2/coc-marksman.git",
     "upstream": "git@git.zhlh6.cn:yaegassy/coc-marksman.git",
     "branches": ["master"]
-  },
-  {
-    "origin": "git@git.zhlh6.cn:ysl2/winbar.nvim.git",
-    "upstream": "git@git.zhlh6.cn:fgheng/winbar.nvim.git",
-    "branches": ["main"]
   }
 ]
